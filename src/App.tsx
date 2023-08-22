@@ -1,4 +1,5 @@
 import './App.css';
+import { createTheme,colors, ThemeProvider } from '@mui/material';
 // import MuiTypography from './components/MuiTypography';
 // import MuiButton from './components/MuiButton';
 // import MuiTextField from './components/MuiTextField';
@@ -30,10 +31,24 @@ import './App.css';
 // import MuiProgress from './components/MuiProgress';
 // import MuiSkeleton from './components/MuiSkeleton';
 // import MuiLoadingButton from './components/MuiLoadingButton';
+// import MuiTabs from './components/MuiTabs';
+// import MuiTimeline from './components/MuiTimeline';
+// import MuiMasonry from './components/MuiMasonry';
+import MuiResponsiveness from './components/MuiResponsiveness';
+
+
+const theme = createTheme({
+  palette:{
+    secondary:{
+      main:colors.orange[500],
+    },  
+  }
+});
 
 function App() {
   
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
       {/* <MuiTypography /> */}
       {/* <MuiButton /> */}
@@ -66,8 +81,12 @@ function App() {
       {/* <MuiProgress /> */}
       {/* <MuiSkeleton /> */}
       {/* <MuiLoadingButton /> */}
-
+      {/* <MuiTabs /> */}
+      {/* <MuiTimeline/> */}
+      {/* <MuiMasonry /> */}
+      <MuiResponsiveness />
     </div>
+    </ThemeProvider>
   );
 };
 
